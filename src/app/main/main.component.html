@@ -1,17 +1,21 @@
 <div class="header">
     <h1>Restaurant Bill System</h1>
 </div>
-<mat-grid-list cols="12" rowHeight="95vh">
+<mat-grid-list cols="12" rowHeight="500px">
     <mat-grid-tile colspan="5">
         <div class="menu__sidebar">
             <div class="menu__title">
                 <p class="menu__heading">Menu List</p>
             </div>
             <div class="menu__list">
-                <div class="menu__item">
+                <div class="menu__item" *ngFor="let item of cartItems">
                     <ul>
                         <li>Name</li>
-                        <li>Name</li>
+                        <li>
+                            <span>-</span>
+                            <span>1</span>
+                            <span>+</span>
+                        </li>
                         <li>Rs. 250</li>
                         <li>Rs. 1000</li>
                     </ul>
@@ -21,7 +25,7 @@
     </mat-grid-tile>
     <mat-grid-tile colspan="7">
         <div class="menu__sidebar">
-            <div class="menu__category">
+            <div class="item__category">
                 <ul>
                     <li><a>All</a></li>
                     <li><a>Appetisers</a></li>
@@ -29,9 +33,15 @@
                     <li><a>Beverages</a></li>
                 </ul>
             </div>
-            <div class="item__list">
-                <div class="item" *ngFor="let item of items">
-                    <img src="" alt="">
+            <div class="item__container">
+                <div class="item__list">
+                    <div class="item" *ngFor="let item of items" (click)="openPopup(item)">
+                        <img class="item__thumbnail" [src]="item.thumbnail" alt="">
+                        <div class="item__details">
+                            <p class="item__name">{{ item.name | uppercase }}</p>
+                            <p class="item__price">{{ item.price | currency:'Rs. ' }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

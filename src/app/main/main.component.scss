@@ -4,8 +4,8 @@ $color-secondary: #d9d1c8;
 $color-white: #eee;
 
 .header {
-    min-height: 5vh;
-    max-height: 5vh;
+    // min-height: 5vh;
+    // max-height: 5vh;
     text-align: center;
     letter-spacing: .5rem;
 }
@@ -42,13 +42,26 @@ mat-grid-tile {
     .menu__item {
         border: .5px solid black;
         border-radius: 5px;
+        margin: 1.5rem 0;
+        background-color: white;
         ul {
             display: flex;
             padding: 0;
             margin: 1.5rem;
             li {
                 list-style: none;
-                width: calc(25%);
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+                &:first-child, &:nth-child(2) {
+                    width: calc(30%);
+                }
+                &:nth-child(3), &:last-child {
+                    width: calc(20%);
+                }
+                &:nth-child(2) {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
             }
         }
     }
@@ -56,7 +69,7 @@ mat-grid-tile {
 
 // Right sidebar
 
-.menu__category {
+.item__category {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     background-color: $color-secondary;
@@ -78,6 +91,11 @@ mat-grid-tile {
     }
 }
 
+.item__container {
+    height: 100% !important;
+    overflow-y: scroll !important;
+}
+
 .item__list {
     display: flex;
     flex-wrap: wrap;
@@ -93,4 +111,16 @@ mat-grid-tile {
     border-radius: 8px;
     box-sizing: border-box;
     background-color: #fff;
+    cursor: pointer;
+}
+
+.item__thumbnail {
+    max-width: 100%;
+}
+
+.item__details {
+    .item__name, .item__price {
+        font-size: 1.5rem;
+        margin: 0;
+    }
 }
