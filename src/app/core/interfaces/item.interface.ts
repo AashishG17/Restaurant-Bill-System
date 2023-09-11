@@ -1,5 +1,7 @@
 export interface ItemInterface {
+    category: string;
+    id: number;
     name: string;
-    thumbnail: string;
     price: number;
+    thumbnail: string;
 }

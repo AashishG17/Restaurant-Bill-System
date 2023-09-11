@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-content>
         <div>
-            <mat-grid-list cols="12" rowHeight="1:1">
+            <mat-grid-list cols="12" rowHeight="1:2">
                 <mat-grid-tile colspan="12">
                     <div class="item__name">
                         Item Name
@@ -9,12 +9,14 @@
                 </mat-grid-tile>
 
                 <mat-grid-tile colspan="6">
-                    <form class="item__discount">
-                        <mat-form-field class="example-full-width">
-                          <mat-label>Discount in Amount</mat-label>
-                          <input matInput placeholder="" value="">
-                        </mat-form-field>
-                    </form>
+                    <div class="item__form">
+                        <form class="discount__form">
+                            <mat-form-field class="discount__label">
+                              <mat-label>Discount in Amount</mat-label>
+                              <input matInput placeholder="" value="">
+                            </mat-form-field>
+                        </form>
+                    </div>
                 </mat-grid-tile>
 
                 <mat-grid-tile colspan="6" rowspan="2">

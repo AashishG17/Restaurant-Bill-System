@@ -1,7 +1,7 @@
 <div class="header">
     <h1>Restaurant Bill System</h1>
 </div>
-<mat-grid-list cols="12" rowHeight="500px">
+<mat-grid-list cols="12" rowHeight="100vh">
     <mat-grid-tile colspan="5">
         <div class="menu__sidebar">
             <div class="menu__title">
@@ -39,7 +39,12 @@
                         <img class="item__thumbnail" [src]="item.thumbnail" alt="">
                         <div class="item__details">
                             <p class="item__name">{{ item.name | uppercase }}</p>
-                            <p class="item__price">{{ item.price | currency:'Rs. ' }}</p>
+                            <p class="item__categories">{{ item.category | uppercase }}</p>
+                            <div class="item__group">
+                                <span class="item__price">{{ item.price | currency:'Rs. ' }}</span>
+                                <span class="item__button">Add</span>
+                                <!-- <span class="item__button">Remove</span> -->
+                            </div>
                         </div>
                     </div>
                 </div>
