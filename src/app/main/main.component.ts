@@ -7,6 +7,7 @@ import { PopUpComponent } from 'src/app/main/components/pop-up/pop-up.component'
 import { ICategory, IItem, IMenu } from 'src/app/core/interfaces/item.interface';
 import { ItemService } from 'src/app/core/services/item.service';
 import { getItems, getOrders } from 'src/app/core/store/item.selectors';
+import { decOrder, delOrder, incOrder } from 'src/app/core/store/item.actions';
 
 @Component({
   selector: 'app-main',
@@ -77,6 +78,18 @@ export class MainComponent implements OnInit, OnDestroy{
       return this.items;
     });
     this.items = items;
+  }
+
+  increaseQuantity(id: number, qty?: number): void {
+    this.store.dispatch(incOrder({ id: id, quantity: qty ? qty : 1 }));
+  }
+
+  decreaseQuantity(id: number, qty?: number): void {
+    if (qty && qty > 1) this.store.dispatch(decOrder({ id: id, quantity: qty ? qty : 1 }));
+  }
+
+  deleteOrder(id: number): void {
+    this.store.dispatch(delOrder({ id: id }));
   }
 
   openPopup(item: any): void {

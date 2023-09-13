@@ -12,12 +12,12 @@
                     <ul>
                         <li>{{ order.name }}</li>
                         <li>
-                            <mat-icon class="c-pointer">remove</mat-icon>
+                            <mat-icon class="c-pointer" (click)="decreaseQuantity(order.id, order.quantity)">remove</mat-icon>
                             <span class="item__quantity">{{ order.quantity }}</span>
-                            <mat-icon class="c-pointer">add</mat-icon>
+                            <mat-icon class="c-pointer" (click)="increaseQuantity(order.id, order.quantity)">add</mat-icon>
                         </li>
-                        <li>{{ order.price | currency:'Rs. ' }}</li>
-                        <li>{{ (order.quantity && order.price * order.quantity | currency:'Rs. ') }}</li>
+                        <li>Rs.<span [ngStyle]="{ 'margin-left': '1px' }">{{ order.price }}</span></li>
+                        <li (click)="deleteOrder(order.id)">Rs. <span></span>{{ order.quantity && order.price * order.quantity }}</li>
                     </ul>
                 </div>
             </div>
