@@ -15,3 +15,17 @@ mat-grid-list {
 .item__discount {
     width: 100% !important;
 }
+
+.button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-mdc-raised-button {
+    &.mat-success {
+        background-color: green !important;
+        color: white !important;
+    }
+}
