@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,9 +12,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MainRoutingModule } from 'src/app/main/main-routing.module';
 import { MainComponent } from 'src/app/main/main.component';
 import { PopUpComponent } from 'src/app/main/components/pop-up/pop-up.component';
-import { FormsModule } from '@angular/forms';
+import { ItemComponent } from './components/item/item.component';
 
 const material: any[] = [
+  MatButtonModule,
   MatCardModule,
   MatDialogModule,
   MatGridListModule,
@@ -22,7 +25,7 @@ const material: any[] = [
 ] 
 
 @NgModule({
-  declarations: [MainComponent, PopUpComponent],
+  declarations: [MainComponent, PopUpComponent, ItemComponent],
   imports: [
     CommonModule,
     FormsModule,
