@@ -14,7 +14,7 @@
         "thumbnail": "https://www.thecookierookie.com/wp-content/uploads/2023/06/featured-white-pizza-recipe.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 450
         },
         { 
         "id": 3,
@@ -22,7 +22,7 @@
         "thumbnail": "https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg?w=500&h=500&crop=1",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 150
         },
         { 
         "id": 4,
@@ -30,7 +30,7 @@
         "thumbnail": "https://cdn.cleaneatingmag.com/wp-content/uploads/2013/04/clean-reuben-sandwich-1.jpg?crop=1:1&w",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 200
         },
         {
         "id": 5,
@@ -38,7 +38,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/5f2333d0841506e1b11da70b/1:1/w_2580%2Cc_limit/ShrimpSkewers_RECIPE_072920_10116.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 1200
         },
         {
         "id": 6,
@@ -46,7 +46,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/60abf60a0e303494c8490c11/1:1/w_2580%2Cc_limit/PorkSpareribs_RECIPE_052021_16270.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 800
         },
         {
         "id": 7,
@@ -54,7 +54,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/5ebadc7fd3e2cba2a7b37b4e/1:1/w_2580%2Cc_limit/GrilledShrimpShishito_HERO_050420_7490.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 1000
         },
         {
         "id": 8,
@@ -62,7 +62,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/5fa44b985cbe6116eb406a35/1:1/w_2580%2Cc_limit/grand-vegetable-biryani-recipe-110520.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 600
         },
         {
         "id": 9,
@@ -70,7 +70,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/60abd3d94128fb7fa6411297/1:1/w_2580%2Cc_limit/ScallopsPineAppleRisotto_HERO_RECIPE_052021_16402.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 400
         },
         {
         "id": 10,
@@ -78,7 +78,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/5e67a4473221b000088c1422/1:1/w_2580%2Cc_limit/tamarind-glazed-black-bass-with-coconut-herb-salad-recipe-BA-031020.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 2500
         },
         {
         "id": 11,
@@ -86,7 +86,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/5ff8785c5941a8ebf9455dcc/1:1/w_2580%2Cc_limit/CashewCurry_RECIPE_121620_6498.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 750
         },
         {
         "id": 12,
@@ -94,7 +94,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/59e8f2f0d7423f64057d4439/1:1/w_2580%2Cc_limit/pork-tenderloin-with-golden-beets-recipe-BA-101917.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 600
         },
         {
         "id": 13,
@@ -102,7 +102,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/5535473267c3a7e837c3d024/1:1/w_2580%2Cc_limit/242584_grilled-halibut-chimichurri_6x4.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 800
         },
         {
         "id": 14,
@@ -110,7 +110,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/568a8fca2e3d7397230d8842/1:1/w_2580%2Cc_limit/Red-Snapper-With-Coconut-Clam.jpg",
         "category": "main course",
         "categoryId": 103,
-        "price": 250
+        "price": 1500
         },
         {
         "id": 15,
@@ -118,7 +118,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/605c8c8a8af215759419a491/1:1/w_2580%2Cc_limit/Daiquiri_RECIPE_2_032321_11384.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 600
         },
         {
         "id": 16,
@@ -126,7 +126,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/605c8748b1622a8602ec4bab/1:1/w_2580%2Cc_limit/GinRickey_RECIPE_2_032321_11568.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 550
         },
         {
         "id": 17,
@@ -134,7 +134,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/627e777232116283cbeb3626/1:1/w_2580%2Cc_limit/Margarita_RECIPE_051222_34068.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 750
         },
         {
         "id": 18,
@@ -142,7 +142,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/620433d72f9a37ddf8cc00e5/1:1/w_2580%2Cc_limit/queens-park-swizzle-andy-sewell.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 450
         },
         {
         "id": 19,
@@ -150,7 +150,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/643979cc6957537dfd61b47f/1:1/w_2580%2Cc_limit/Caipirinha_RECIPE_041223_51459.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 350
         },
         {
         "id": 20,
@@ -158,7 +158,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/62700495b2eaa778eefd00e8/1:1/w_2580%2Cc_limit/Mojito_RECIPE_042822_33166.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 550
         },
         {
         "id": 21,
@@ -174,7 +174,7 @@
         "thumbnail": "https://assets.epicurious.com/photos/62fa60b076285708982d6a05/1:1/w_2580%2Cc_limit/Ranch_Water_RECIPE_081120_38479.jpg",
         "category": "beverage",
         "categoryId": 102,
-        "price": 250
+        "price": 350
         },
         {
         "id": 23,
@@ -182,7 +182,7 @@
         "thumbnail": "https://www.tasteofhome.com/wp-content/uploads/2018/07/Orange-Glazed-Meatballs_EXPS_THSO18_228881_D04_19_9b-1.jpg?fit=700,700",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 450
         },
         {
         "id": 24,
@@ -198,7 +198,7 @@
         "thumbnail": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Ham-n-Cheese-Biscuit-Stacks_EXPS_HC17_31947_D10_19_8b-2.jpg?fit=700,700",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 300
         },
         {
         "id": 26,
@@ -214,7 +214,7 @@
         "thumbnail": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Crispy-Sriracha-Spring-Rolls_EXPS_THCA17_196774_C11_01_1b-2.jpg?fit=700,700",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 200
         },
         {
         "id": 28,
@@ -222,7 +222,7 @@
         "thumbnail": "https://www.tasteofhome.com/wp-content/uploads/2017/09/exps47453_HC153382D09_18_10b.jpg?fit=700,700",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 150
         },
         {
         "id": 29,
@@ -230,7 +230,7 @@
         "thumbnail": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Sweet-Gingered-Chicken-Wings_exps718_RCCF143496D04_16_2bC_RMS-3.jpg?fit=700,700",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 450
         },
         {
         "id": 30,
@@ -238,7 +238,7 @@
         "thumbnail": "https://www.tasteofhome.com/wp-content/uploads/2018/01/exps163028_SD132779C06_13_5b_WEB-3.jpg?fit=700,700",
         "category": "appetizer",
         "categoryId": 101,
-        "price": 250
+        "price": 300
         }
     ],
     "category": [
