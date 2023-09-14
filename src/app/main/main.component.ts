@@ -23,6 +23,8 @@ export class MainComponent implements OnInit, OnDestroy{
   orders!: IItem[];
   categories!: ICategory[];
   displayedColumns: string[] = ['name', 'price', 'quantity', 'subtotal', 'action'];
+  currentPage: number = 1;
+  itemsPerPage: number = 9;
 
   constructor(
     private readonly store: Store<{ menu: IMenu }>,
@@ -50,6 +52,12 @@ export class MainComponent implements OnInit, OnDestroy{
         }
       }),
     );
+  }
+
+  get displayedData() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.items.slice(startIndex, endIndex);
   }
 
   getItems(): void {
@@ -102,6 +110,26 @@ export class MainComponent implements OnInit, OnDestroy{
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });
+  }
+
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages()) {
+      this.currentPage++;
+    }
+  }
+
+  totalPages(): number {
+    return Math.ceil(this.items.length / this.itemsPerPage);
+  }
+
+  getPaginationArray(): number[] {
+    return new Array(this.totalPages()).fill(0).map((_, i) => i + 1)
   }
 
   openPopup(item: any): void {
