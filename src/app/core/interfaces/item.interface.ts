@@ -6,6 +6,8 @@ export interface IItem {
     price: number;
     thumbnail: string;
     quantity?: number;
+    discount?: number;
+    originalPrice?: number;
 }
 
 export interface ICategory {
