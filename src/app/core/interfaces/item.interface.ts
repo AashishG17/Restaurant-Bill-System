@@ -17,3 +17,10 @@ export interface IMenu {
     items: IItem[],
     orders: IItem[],
 }
+
+export interface IOrderDetails {
+    totalQuantity: number;
+    totalPrice: number;
+    totalDiscount: number;
+    netTotal: number;
+}
