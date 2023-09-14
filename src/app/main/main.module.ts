@@ -14,8 +14,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MainRoutingModule } from 'src/app/main/main-routing.module';
 import { MainComponent } from 'src/app/main/main.component';
 import { PopUpComponent } from 'src/app/main/components/pop-up/pop-up.component';
-import { ItemComponent } from 'src/app/main/components/item/item.component';
 import { MenuDetailsComponent } from 'src/app/main/components/menu-details/menu-details.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 const material: any[] = [
   MatButtonModule,
@@ -30,7 +30,7 @@ const material: any[] = [
 ] 
 
 @NgModule({
-  declarations: [MainComponent, PopUpComponent, ItemComponent, MenuDetailsComponent],
+  declarations: [MainComponent, PopUpComponent, MenuDetailsComponent, OrdersComponent],
   imports: [
     CommonModule,
     FormsModule,
