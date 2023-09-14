@@ -3,28 +3,40 @@
         <div>
             <mat-grid-list cols="12" rowHeight="1:2">
                 <mat-grid-tile colspan="12">
-                    <div class="item__name">
-                        Item Name
+                    <div class="item__container">
+                        <p class="item__title">{{ item.name | uppercase }}</p>
                     </div>
                 </mat-grid-tile>
 
                 <mat-grid-tile colspan="6">
-                    <div class="item__form">
-                        <form class="discount__form">
-                            <mat-form-field class="discount__label">
-                              <mat-label>Discount in Amount</mat-label>
-                              <input matInput placeholder="" value="">
-                            </mat-form-field>
-                        </form>
+                    <div class="item__container">
+                        <div class="item__info">
+                            <p class="item__title">Discount in Amount</p>
+                            <p>NRS {{ calculateDiscount() }}</p>
+                        </div>
                     </div>
                 </mat-grid-tile>
 
                 <mat-grid-tile colspan="6" rowspan="2">
-                    3
+                    <div class="item__container">
+                        <div class="item__info">
+                            <p class="item__title">Price After Discount</p>
+                            <p>NRS {{ item.price - calculateDiscount() }}</p>
+                        </div>
+                    </div>
                 </mat-grid-tile>
 
                 <mat-grid-tile colspan="6">
-                    4
+                    <div class="item__container">
+                        <div class="item__form">
+                            <mat-form-field>
+                                <div class="discount__label">
+                                    <mat-label>Discount in Amount</mat-label>
+                                    <input matInput [(ngModel)]="discountPercent">
+                                </div>
+                            </mat-form-field>
+                        </div>
+                    </div>
                 </mat-grid-tile>
 
                 <mat-grid-tile colspan="6">
