@@ -1,7 +1,7 @@
 import { createReducer, on } from "@ngrx/store";
 
 import { IMenu } from "src/app/core/interfaces/item.interface";
-import { addOrder, decOrder, delOrder, incOrder } from "src/app/core/store/item.actions";
+import { addOrder, decOrder, delOrder, incOrder, loadItems, loadItemsSuccess } from "src/app/core/store/item.actions";
 
 export const menu: IMenu  = {
     items: [],
@@ -10,12 +10,17 @@ export const menu: IMenu  = {
 
 export const menuReducer = createReducer(
     menu,
-    // on(loadItems, (state, action) => {
-    //     return {
-    //         ...state,
-    //         itemList: [...action.]
-    //     }
-    // }),
+    on(loadItems, (state) => {
+        return {
+            ...state,
+        }
+    }),
+    on(loadItemsSuccess, (state, action) => {
+        return {
+            ...state,
+            items: [...action.items]
+        }
+    }),
     on(addOrder, (state, action) => {
         if (state.orders.some(order => order.id === action.orders.id)) {
             return {
