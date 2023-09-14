@@ -26,7 +26,7 @@ export class ItemService {
 
   showSnackBar(msg: string): void {
     this.snackBar.open(msg, 'Dismiss', {
-      duration: 2000,
+      duration: 1000,
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });
