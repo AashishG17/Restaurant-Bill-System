@@ -5,11 +5,12 @@ $color-white: #eee;
 $color-text-primary: hsl(26, 16%, 34%);
 $color-text-secondary: #655549b4;
 
-.header {
-    // min-height: 5vh;
-    // max-height: 5vh;
+.header__card {
     text-align: center;
     letter-spacing: .5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    background-color: $color-primary-dark !important;
 }
 
 mat-grid-tile {
@@ -37,38 +38,35 @@ mat-grid-tile {
     }
 }
 
-
 .menu__list {
     margin: 2rem;
-    .menu__item {
-        border: .5px solid black;
-        border-radius: 5px;
-        margin: 1.5rem 0;
-        background-color: white;
-        ul {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            margin: 1.5rem;
-            li {
-                font-size: 1.5rem;
-                list-style: none;
-                &:first-child, &:nth-child(2) {
-                    width: calc(30%);
-                }
-                &:nth-child(3), &:last-child {
-                    width: calc(20%);
-                }
-                &:first-child {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                &:nth-child(2) {
-                    display: flex;
-                    justify-content: space-evenly;
-                }
-            }
-        }
+    
+    .demo-table {
+        width: 100%;
+    }
+
+    .mat-mdc-row .mat-mdc-cell {
+        padding: 1.25rem;
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .mat-mdc-row:hover .mat-mdc-cell {
+        border-color: $color-text-secondary;
+    }
+
+    .no-order__img {
+        width: calc(80%);
+    }
+
+    mat-card-title {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    mat-card-footer {
+        margin-bottom: 3rem;
     }
 }
 
@@ -176,10 +174,31 @@ mat-grid-tile {
 
 .item__quantity {
     font-size: 1.75rem;
+    padding: 0 10px;
     display: flex;
     align-items: center;
 }
 
-.c-pointer {
-    cursor: pointer;
+.item__qty {
+    .item__row {
+        display: flex;
+        border: .5px solid $color-text-secondary;
+        border-radius: 10px;
+        padding: .5rem;
+        .item__icon {
+            cursor: pointer;
+            color: $color-text-secondary;
+        }
+    }
+}
+
+.item__del {
+    color: $color-text-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-order {
+    text-align: center;
 }
