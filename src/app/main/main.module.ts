@@ -8,11 +8,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { MainRoutingModule } from 'src/app/main/main-routing.module';
 import { MainComponent } from 'src/app/main/main.component';
 import { PopUpComponent } from 'src/app/main/components/pop-up/pop-up.component';
-import { ItemComponent } from './components/item/item.component';
+import { ItemComponent } from 'src/app/main/components/item/item.component';
 
 const material: any[] = [
   MatButtonModule,
@@ -22,6 +24,8 @@ const material: any[] = [
   MatIconModule,
   MatInputModule, 
   MatTableModule,
+  MatTooltipModule,
+  MatSnackBarModule,
 ] 
 
 @NgModule({
