@@ -1,23 +1,23 @@
-<div class="menu__details">
+<div class="menu__details" *ngIf="orderDetails.totalQuantity !== 0">
     <div class="menu__detailbar">
         <li>
-            <strong>Total Quantity:</strong>
-            <span class="menu__detail-value">55</span>
+            <strong>Quantity:</strong>
+            <span class="menu__detail-value">{{ orderDetails.totalQuantity }}</span>
         </li>
         <li>
-            <strong>Total Price:</strong>
-            <span class="menu__detail-value">NRS 5000</span>
+            <strong>Discount:</strong>
+            <span class="menu__detail-value">NRS {{ orderDetails.totalDiscount }}</span>
         </li>
         <li>
     </div>
     <div class="menu__detailbar">
         <li>
-            <strong>Total Price:</strong>
-            <span class="menu__detail-value">NRS 5000</span>
+            <strong>Total:</strong>
+            <span class="menu__detail-value">NRS {{ orderDetails.totalPrice }}</span>
         </li>
         <li>
-            <strong>Net Price:</strong>
-            <span class="menu__detail-value">NRS 5000</span>
+            <strong>Net Total:</strong>
+            <span class="menu__detail-value">NRS {{ orderDetails.netTotal }}</span>
         </li>
     </div>
 </div>

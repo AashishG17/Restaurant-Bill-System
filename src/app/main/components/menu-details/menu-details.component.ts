@@ -12,8 +12,13 @@ import { getOrders } from 'src/app/core/store/item.selectors';
 })
 export class MenuDetailsComponent implements OnInit, OnDestroy {
   private subscription: Subscription[] = [];
-  private orders!: IItem[];
-  orderDetails!: IOrderDetails;
+  private orders: IItem[] = [];
+  orderDetails: IOrderDetails = {
+    totalQuantity: 0,
+    totalDiscount: 0,
+    totalPrice: 0,
+    netTotal: 0
+  }
 
   constructor(
     private readonly store: Store<{ menu: IMenu }>,
@@ -24,16 +29,23 @@ export class MenuDetailsComponent implements OnInit, OnDestroy {
       this.store.select(getOrders).subscribe({
         next: (orders) => {
           this.orders = orders;
+          this.calculateOrderDetails();
         }
       }),
     );
   }
 
   private calculateOrderDetails(): void {
-
+    this.orderDetails.totalQuantity = this.orders.length;
     this.orderDetails.totalPrice = this.orders.reduce((total, order) => {
-      return order.price;
-    }, 0)
+      return (order.originalPrice ? order.originalPrice : 0) + total;
+    }, 0);
+    this.orderDetails.totalDiscount = this.orders.reduce((total, order) => {
+      return (order.discount ? order.discount : 0) + total;
+    }, 0);
+    this.orderDetails.netTotal = this.orders.reduce((total, order) => {
+      return order.price + total;
+    }, 0);
   }
 
   ngOnDestroy(): void {

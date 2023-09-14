@@ -30,6 +30,8 @@ export class PopUpComponent implements OnInit, OnDestroy {
     const data = {
       ...this.item,
       price: this.item.price - this.calculateDiscount(),
+      originalPrice: this.item.price,
+      discount: this.calculateDiscount(),
     }
     this.store.dispatch(addOrder({ orders: data }));
     this.itemService.showSnackBar('Order Added!')
