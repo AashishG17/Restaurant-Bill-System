@@ -5,9 +5,7 @@ import { addOrder, decOrder, delOrder, incOrder } from "src/app/core/store/item.
 
 export const menu: IMenu  = {
     items: [],
-    orders: [
-        { id: 0, name: 'yes', thumbnail: 'yes', categoryId: 0, category: 'yes', price: 0, quantity: 1 }
-    ],
+    orders: [],
 };
 
 export const menuReducer = createReducer(
