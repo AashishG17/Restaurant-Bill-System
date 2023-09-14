@@ -8,6 +8,7 @@ import { ICategory, IItem, IMenu } from 'src/app/core/interfaces/item.interface'
 import { ItemService } from 'src/app/core/services/item.service';
 import { getItems, getOrders } from 'src/app/core/store/item.selectors';
 import { decOrder, delOrder, incOrder } from 'src/app/core/store/item.actions';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-main',
@@ -21,11 +22,13 @@ export class MainComponent implements OnInit, OnDestroy{
   items!: IItem[];
   orders!: IItem[];
   categories!: ICategory[];
+  displayedColumns: string[] = ['name', 'price', 'quantity', 'subtotal', 'action'];
 
   constructor(
     private readonly store: Store<{ menu: IMenu }>,
     private readonly dialog: MatDialog,
     private readonly itemService: ItemService,
+    private readonly snackBar: MatSnackBar,
   ) {}
 
   ngOnInit(): void {
@@ -90,6 +93,15 @@ export class MainComponent implements OnInit, OnDestroy{
 
   deleteOrder(id: number): void {
     this.store.dispatch(delOrder({ id: id }));
+    this.showSnackBar('Order Removed!');
+  }
+
+  showSnackBar(msg: string): void {
+    this.snackBar.open(msg, 'Dismiss', {
+      duration: 2000,
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+    });
   }
 
   openPopup(item: any): void {
