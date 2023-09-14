@@ -83,13 +83,15 @@ mat-grid-tile {
     bottom: 0;
     width: 100%;
     background-color: $color-secondary;
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
+    justify-content: space-between;
     .menu__detailbar {
         font-size: 1.5rem;
         margin: 0 2rem;
         li {
             list-style: none;
+            margin-bottom: 2px;
         }
     }
 }
@@ -130,6 +132,10 @@ mat-grid-tile {
     }
 }
 
+.item__container {
+    height: 100%;
+}
+
 .active {
     font-weight: bold;
 }
@@ -138,6 +144,7 @@ mat-grid-tile {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
 }
 
 .item {
@@ -241,10 +248,13 @@ mat-grid-tile {
 
 // Pagination
 .item__pagination {
+    position: sticky;
+    bottom: 0;
+    background-color: $color-primary;
     display: flex;
     justify-content: space-between;
     justify-items: center;
-    margin: 2rem 5rem;
+    padding: 1rem 6rem;
 
     .pagination__btn {
         border: .5px solid black;
@@ -252,6 +262,7 @@ mat-grid-tile {
         height: 25px;
         width: 25px;
         padding: 1rem;
+        cursor: pointer;
     }
 
     .pagination__page {

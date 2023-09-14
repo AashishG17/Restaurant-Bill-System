@@ -23,7 +23,6 @@ export class MainComponent implements OnInit, OnDestroy{
   orders!: IItem[];
   categories!: ICategory[];
   selectedCategory!: string;
-  displayedColumns: string[] = ['name', 'price', 'quantity', 'subtotal', 'action'];
   menuListColSpan:number = 5;
   menuItemColSpan:number = 7;
   currentPage: number = 1;
@@ -105,19 +104,6 @@ export class MainComponent implements OnInit, OnDestroy{
     }
     this.currentPage = 1;
     this.totalPages();
-  }
-
-  increaseQuantity(id: number, qty?: number): void {
-    this.store.dispatch(incOrder({ id: id, quantity: qty ? qty : 1 }));
-  }
-
-  decreaseQuantity(id: number, qty?: number): void {
-    if (qty && qty > 1) this.store.dispatch(decOrder({ id: id, quantity: qty ? qty : 1 }));
-  }
-
-  deleteOrder(id: number): void {
-    this.store.dispatch(delOrder({ id: id }));
-    this.itemService.showSnackBar('Order Removed!');
   }
 
   prevPage(): void {
